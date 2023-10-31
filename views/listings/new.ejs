@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Listing</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="whole__container">
+        <div class="whole__content">
+    <h1 class="text__info">Add a Listing</h1>
+
+    <form action="/listings" method="post" class="list__name ">
+        <div>
+            <label for="name" class="list__label text__info">Listing Name:</label>
+            <input type="text" name="name" id="name" class="email__blank text__info">
+        </div>
+        <br>
+        <div>
+            <label for="username" class="pw__label text__info">Uploaded by:</label>
+            <input type="text" name="username" id="username" class="email__blank text__info">
+        </div>
+        <br>
+        <div>
+            <label for="category" class="cat__label text__info">Select Category</label>
+            <select name="category" id="category" class="cat__select text__info">
+                <% for(let category of categories) { %>
+                    <option value="<%= category %>"><%= category %></option>
+                <% } %> 
+            </select>
+        </div>
+        <div class="content__container grid">
+            <label for="description" class="cat__label text__info">Short Description:</label>
+            <textarea  type="text" name="description" id="description" cols="10" rows="5" class="desc_txt text__info" ></textarea>
+        </div>
+        <br>
+        <div class="content__container grid ">
+            <label for="address" class="cat__label text__info">Address:</label>
+            <textarea type="text" name="address" id="address" cols="10" rows="5" class="desc_txt text__info"  ></textarea>
+        </div>
+        <br>
+        <button class="login__button button">Submit</button>
+    </form>
+    <form action="/listings" method="GET">
+        <button class="back__button button"> Back</button>
+    </form>
+</div>
+</div>
+
+</body>
+</html>

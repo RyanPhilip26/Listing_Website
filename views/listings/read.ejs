@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= listing.name %> </title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="whole__container">
+    <h1 class="about__info text__align"><%= listing.name %></h1>
+
+    <ul>
+        <div class="about__container">
+        <li class="about__info">Uploaded by: <%= listing.username %> </li>
+        <li class="about__info">Category: <a href="/listings?category=<%= listing.category %>"><%= listing.category %></a></li>
+        <li class="about__info">Description: <%= listing.description %> </li>
+        <li class="about__info">Address: <%= listing.address %> </li>
+        <li class="about__info">Reviews: <%= listing.review %> </li>
+        
+        </div>
+    </ul>
+<div class="edit__container">
+    <form action="/listings">
+        <button class="edit__button button">View All Listings</button>
+        
+    </form>
+   <form action="/listings/<%= listing._id %>/updateListing">
+    <button class="edit__button button">Edit Listing</button>
+</form>
+</div>
+    <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
+        <button class="delete__button buttons">Delete Listing</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All listings</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <div class="body__container">
+    <h1 class=" listing__label text__info">All listings</h1>
+    <div class="listing__container container">
+        <div class="listing__content">
+            <ul class="listing__list grid">
+                <% for(let listing of listings) { %> 
+
+                    <div class="about__container">
+                        <a class="about__info" href="/listings/<%= listing.id %> "><%= listing.name %></a>
+                        <li class="about__info">Uploaded by: <%= listing.username %> </li>
+                        <li class="about__info">Category: <a href="/listings?category=<%= listing.category %>"><%= listing.category %></a></li>
+                        <li class="about__info">Description: <%= listing.description %> </li>
+                        <li class="about__info">Address: <%= listing.address %> </li>
+                        
+                    </div>
+                        
+                    
+                <% } %> 
+            </ul>
+        </div>
+        
+    </div>
+    
+<div class="add__container">
+    <form action="/listings/new">
+        <button class="login__button button">Add New Product</button>
+    </form>
+    
+</div>
+  
+</div>
+
+</body>
+</html>

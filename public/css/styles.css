@@ -1,0 +1,265 @@
+
+/* == GENERAL CSS CODE == */
+body{
+    background-image: url('house.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+  display: inline-block;
+  background-color: lightblue;
+  padding: .5rem;
+  border-radius: .5rem;
+  font-weight: .5rem;
+  width: 7rem;
+  margin-left: 1rem;
+}
+
+.buttons{
+    background-color: lightcoral;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-weight: .5rem;
+    width: 7rem;
+    margin-left: 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+/* == LOGIN == */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__content{
+    padding-top: 2.5rem ;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    align-items: center;
+    background-color:white;
+    max-width: 350px;
+    padding-bottom: 2.5rem;
+    justify-content: center;
+    border-radius: 1rem;
+    margin: auto;
+}
+
+.email__label{
+    padding-right: 2.3rem;
+}
+
+.name__label{
+    padding-right: 2.2rem;
+}
+
+.email__blank{
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+}
+
+.pw__label{
+    padding-right: .55rem;
+}
+
+.pw__blank{
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+}
+
+.login__text{
+    margin-left: 7rem;
+    
+}
+
+.login__buttons{
+    margin-left: 6rem;
+    justify-content: center;
+    
+}
+
+.login__button{
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.reg__text{
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.register__container{
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+}
+
+.reg__button{
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium';
+   
+    margin-left: 6rem;
+    margin-bottom: .5rem;
+}
+
+.cancel__button{
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium';
+    
+    margin-left: 6rem;
+    
+}
+
+.logout__button{
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium';
+    margin-top: .5rem;
+}
+
+.view__button{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium';
+   
+    margin-left: 6rem;
+}
+
+/* == LISTING LIST  == */
+.body__container{
+    background: white;
+    width: max-content;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: max-content;
+}
+
+
+.whole__container{
+    background: white;
+    width: 500px;
+    border-radius: 2rem;
+}
+
+.whole__content{
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.listing__content{
+    display: inline-block;
+    left: 0;
+    padding: 1rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: .3s;
+}
+
+.listing__list{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10rem;
+    
+}
+
+.listing__label{
+   justify-content: center;
+   align-items: center;
+   margin-left: 35rem;
+}
+
+.add__container{
+    justify-content: left;
+    
+}
+
+.about__container{
+  display: grid;
+    
+}
+
+.about__info{
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+/* == NEW LISTING  == */
+.list__label{
+    padding-right: .2rem;
+}
+
+.cat__label{
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.cat__select{
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+    font-size: .98rem;
+}
+
+.content__container{
+  border-radius: .5rem;
+
+}
+
+.desc_txt{
+    max-width: 350px;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.back__button{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium';
+    
+    
+}
+
+/* == EDIT LISTING  == */
+
+.edit__container{
+    display: flex;
+    gap: 1rem;
+    margin-top: 30rem;
+}
+
+.edit__button{
+    margin-bottom: 1rem;
+    font-weight: bolder;
+}
+
+.delete__button{
+    background-color: lightcoral;
+    font-weight: bolder;
+}
+
+.text__info{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text__align{
+    margin-left: 2.5rem;
+}
+
+.image__all{
+    max-width: 10px;
+}
+
+#map{
+    height: 400px;
+    width: 400px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit a Listing</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <div class="whole__container">
+        <div class="whole__content">
+    <h1 class="text__info">Edit a Listing</h1>
+
+    <form action="/listings/<%= listing._id %>?_method=PUT" method="post">
+        <div>
+            <label for="name" class="list__label text__info">Listing Name</label>
+            <input type="text" name="name" class="email__blank text__info" id="name" placeholder="Listing Name" value="<%= listing.name %>">
+        </div>
+        <br>
+        <div>
+            <label for="username" class="pw__label text__info">Uploaded by:</label>
+            <input type="text" class="email__blank text__info" name="username" id="username" placeholder="Username" value="<%= listing.username %>">
+        </div>
+        <br>
+        <div>
+            <label for="category" class="cat__label text__info">Select Category</label>
+            <select name="category" id="category" class="cat__select text__info">
+                <% for(let category of categories) { %>
+                    <option value="<%= category %>"<%=listing.category === category ? 'selected': ''%>><%= category %></option>
+                <% } %> 
+                </select>
+        </div>
+        <div class="content__container grid">
+            <label for="description" class="cat__label text__info">Short Description:</label>
+            <textarea type="text" name="description" id="description" cols="10" rows="5" class="desc_txt text__info" value="<%= listing.description %>" cols="30" rows="10" ></textarea>
+        </div>
+        <br>
+        <div class="content__container grid"> 
+            <label for="address" class="cat__label text__info">Address:</label>
+            <textarea type="text"name="address" id="address"  cols="10" rows="5" class="desc_txt text__info" value="<%= listing.address %>" cols="30" rows="10" ></textarea>
+        </div>
+        <br>
+        <div class="content__container grid ">
+            <label for="review" class="cat__label text__info">Add a Review:</label> 
+            <textarea type="text" name="review" id="review" cols="10" rows="3" class="desc_txt text__info" ></textarea>
+        </div>
+<br>
+    <button class="login__button button">Update</button>
+    </form>
+    <form action="/listings/<%=listing._id%>" method="GET">
+        <button class="back__button button">Cancel</button>
+    </form>
+    
+</div>
+</div>
+</body>
+</html>

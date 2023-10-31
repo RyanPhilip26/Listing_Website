@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login_container container">
+    <div class="login__content">
+  <h1 class="reg__text text__info">Register</h1>
+<form action="/register" method="POST">
+  <div>
+    <label for="name" class="name__label text__info">Name</label>
+    <input type="text" id="name" name="name" class="email__blank text__info" required>
+  </div>
+  <div>
+    <label for="email" class="email__label text__info">Email</label>
+    <input type="email" id="email" name="email" class="email__blank text__info" required>
+  </div>
+  <div>
+    <label for="password" class="pw__label text__info">Password</label>
+    <input type="password" id="password" name="password" class="pw__blank text__info" required>
+  </div>
+  
+    <button type="submit" class="reg__button button ">Register</button>
+  
+</form>
+  <form action="/login">
+    <button class="cancel__button button">Cancel</button>
+  </form>
+</div>
+</div>
+</div>
+</body>
+</html>

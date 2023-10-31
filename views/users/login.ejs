@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+  <div class="login_container container">
+  <div class="login__content">
+    <h1 class="login__text text__info">Login</h1>
+    <% if (messages.error) { %>
+      <%= messages.error %>
+    <% } %>
+    <form action="/login" class="login__form" method="POST">
+      <div>
+        <label for="email" class="email__label text__info">Email</label>
+        <input type="email" id="email" name="email" class="email__blank text__info" required>
+      </div>
+      <div>
+        <label for="password" class="pw__label text__info">Password</label>
+        <input type="password" id="password" name="password" class="pw__blank text__info" required>
+      </div>
+      <div class="login__buttons">
+        <button type="submit" class="login__button button">Login</button>
+      </div>
+    </form>
+    <div class="register__container text__info">
+      Don't have an account? <a href="/register" class="register__link text__info">Register</a>
+    </div>
+    <div class="view__listing">
+      <form action="/listings">
+        <button class="view__button button">View All Listings</button>
+      </form>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
+
+
